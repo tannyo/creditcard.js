@@ -71,11 +71,11 @@ name of card
 
 The [demo](https://tannyo.github.io/creditcard.js/) brings together several technologies. It uses [Bootstrap](http://getbootstrap.com/) to make it responsive, though it really doesn't need a responsive grid framework. The code also makes use of a stackoverflow question on [When Scan Credit Card option is available on iOS8 Safari?](http://stackoverflow.com/questions/25163891/when-scan-credit-card-option-is-available-on-ios8-safari/25925195#25925195) to enable the scan credit card option when using iOS8+. Just make sure you use one of serveral naming schemes for you form varibles and it works.
 
-[Scan Credit Card on Keyboard](https://github.com/tannyo/creditcard.js/img/IMG_0903.png)
+![Scan Credit Card on Keyboard](https://github.com/tannyo/creditcard.js/raw/master/img/IMG_0903.png)
 
 When you tap Scan Credit Card you get a screen with a rectangle to hold your credit card in. It moves in and out then if the light is good enough, it will auto-fill the credit card number, expires date, and name. The only requirement is properly named fields an https with a certificate that is not self-signed.
 
-[Scan Credit Card Screen](https://github.com/tannyo/creditcard.js/img/IMG_0909.png)
+![Scan Credit Card Screen](https://github.com/tannyo/creditcard.js/raw/master/img/IMG_0909.png)
 
 The code in `cc.js` uses the creditcard.getType(partial or full value of credit card number field) to change the image of the credit card in the left side of the credit card number input field. It currently supports a default card, Visa, MasterCard, AMEX, and Discover. While the creditcard.js code will validate other cards, the form will display the default card.
 
