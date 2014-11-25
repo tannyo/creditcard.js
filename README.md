@@ -2,9 +2,9 @@
 
 JavaScript object that enables you to determine a credit card type by credit card number and validate a credit card number.
 
-I needed a way to validate a credit card number and updated the code to an object with several methods to help validate a credit card form. I originally downloaded the code from John Gardner at [JavaScript Credit Card Validation Function](http://www.braemoor.co.uk/software/creditcard.shtml).
+I needed a way to validate a credit card number and updated the code to an object with several methods to help validate a credit card form. Originally downloaded the code from John Gardner at [JavaScript Credit Card Validation Function](http://www.braemoor.co.uk/software/creditcard.shtml).
 
-* I converted the code to an object.
+* Converted the code to an object.
 * Added method to determine the credit card type by credit card prefix.
 * Removed the requirement to supply the card type when validating a credit card number.
 
