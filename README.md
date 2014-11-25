@@ -65,8 +65,6 @@ number on the card
 ### cardName
 name of card
 
-<<<<<<< HEAD
-=======
 #Demo
 
 [Credit Card Information](https://tannyo.github.io/creditcard.js/)
@@ -83,7 +81,6 @@ The code in `cc.js` uses the creditcard.getType(partial or full value of credit 
 
 You may have noticed on a mobile device that the keyboard changes to big blocky number keys. I found out how to do this from Luke Wroblewski from the [Video: Mobile Navigation, Conversion, Input, & More](http://www.lukew.com/ff/entry.asp?1936) presentation he gave at Google in Ireland. It consists of 2 videos with the second video getting into the nuts and bolts of mobile form design. Both videos are very good and I highly recommend taking the 2 hours to view the videos.
 
->>>>>>> master
 ## Browser Support
 
 Tested in the latest versions of Chrome, Firefox, Safari, IE 5.5 - 11, iOS, and Android.
@@ -115,7 +112,8 @@ Want to contribute? Great! Just fork the project, make your changes and open a [
   2. Updated MasterCard and DinersClub prefixes from Wikipedia.
   3. Updated documentation.
   4. Cleaned up code.
-* v0.10 24 Nov 2014 TKO Created in GitHub by Tanny O'Haley
+* v0.10 24 Nov 2014 TKO Created in GitHub by Tanny O'Haley.
+* v0.11 25 Nov 2014 TKO Updated card list from Wikipedia.
 
 ## License
 
