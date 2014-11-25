@@ -8,7 +8,7 @@ I needed a way to validate a credit card number and updated the code to an objec
 * Added method to determine the credit card type by credit card prefix.
 * Removed the requirement to supply the card type when validating a credit card number.
 
-> The structure of credit card formats was gleaned from a variety of sources on the web, although the best is probably on [Wikepedia ("Credit card number")](http://en.wikipedia.org/wiki/Credit_card_number).
+> The structure of credit card formats was gleaned from a variety of sources on the web, although the best is probably on [Wikipedia ("Credit card number")](http://en.wikipedia.org/wiki/Credit_card_number).
 >
 > John Gardner
 
@@ -25,7 +25,7 @@ Returns the name of the card based on a partial or complete credit card number. 
 Validates the supplied credit card number. Returns false if invalid or not supported. Uses the card number prefix to determine the kind of card to check.
 
 ### creditCard.errMsg()
-  Returns the text of the last error or an empty string if no error.
+Returns the text of the last error or an empty string if no error.
 
 ### creditCard.errNo()
 Returns the last error number.
@@ -69,15 +69,15 @@ name of card
 
 [Credit Card Information](https://tannyo.github.io/creditcard.js/)
 
-The [demo](https://tannyo.github.io/creditcard.js/) brings together several technologies. It uses [Bootstrap](http://getbootstrap.com/) to make it responsive, though it really doesn't need a responsive grid framework. The code also makes use of a stackoverflow question on [When Scan Credit Card option is available on iOS8 Safari?](http://stackoverflow.com/questions/25163891/when-scan-credit-card-option-is-available-on-ios8-safari/25925195#25925195) to enable the scan credit card option when using iOS8+. Just make sure you use one of serveral naming schemes for you form varibles and it works.
+The [demo](https://tannyo.github.io/creditcard.js/) brings together several technologies. It uses [Bootstrap](http://getbootstrap.com/) to make it responsive, though it really doesn't need a responsive grid framework. The code also makes use of a stackoverflow question on [When Scan Credit Card option is available on iOS8 Safari?](http://stackoverflow.com/questions/25163891/when-scan-credit-card-option-is-available-on-ios8-safari/25925195#25925195) to enable the scan credit card option when using iOS8+. Just make sure you use one of several naming schemes for your form variables and the scan credit card option is enabled by progressive enhancement.
 
 ![Scan Credit Card on Keyboard](https://github.com/tannyo/creditcard.js/raw/master/img/IMG_0909.png)
 
-When you tap Scan Credit Card you get a screen with a rectangle to hold your credit card in. It moves in and out then if the light is good enough, it will auto-fill the credit card number, expires date, and name. The only requirement is properly named fields an https with a certificate that is not self-signed.
+When you tap Scan Credit Card you get a screen with a rectangle to position your credit card. The image of the credit card moves in and out, then if the light is good enough, it will auto-fill the credit card number, expires date, and name. The only requirement is properly named fields and https with a certificate that is not self-signed.
 
 ![Scan Credit Card Screen](https://github.com/tannyo/creditcard.js/raw/master/img/IMG_0903.png)
 
-The code in `cc.js` uses the creditcard.getType(partial or full value of credit card number field) to change the image of the credit card in the left side of the credit card number input field. It currently supports a default card, Visa, MasterCard, AMEX, and Discover. While the creditcard.js code will validate other cards, the form will display the default card.
+The code in the [demo](https://tannyo.github.io/creditcard.js/) uses the creditcard.getType(partial-or-full-value-of-credit-card-number-field) to change the image of the credit card in the left side of the credit card number input field. The demo currently supports a default card, Visa, MasterCard, AMEX, and Discover card images. While the `creditcard.js` code will validate other cards, the form will display the default card.
 
 You may have noticed on a mobile device that the keyboard changes to big blocky number keys. I found out how to do this from Luke Wroblewski from the [Video: Mobile Navigation, Conversion, Input, & More](http://www.lukew.com/ff/entry.asp?1936) presentation he gave at Google in Ireland. It consists of 2 videos with the second video getting into the nuts and bolts of mobile form design. Both videos are very good and I highly recommend taking the 2 hours to view the videos.
 
@@ -93,7 +93,7 @@ Have a bug? Please create an [issue](https://github.com/tannyo/creditcard.js/iss
 
 Want to contribute? Great! Just fork the project, make your changes and open a [pull request](https://github.com/tannyo/creditcard.js/pulls).
 
-## Changelog
+## Change log
 ### Authored by John Gardner
 * 01 Nov 2003 Created
 * 26 Feb 2005 Additional cards added by request
