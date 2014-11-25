@@ -74,6 +74,7 @@ Modified:   Tanny O'Haley
 21 Nov 2014 TKO Modified cards array to store regular expressions and numbers for length.
                 Updated MasterCard and DinersClub prefixes from Wikipedia. Updated documentation.
                 Cleaned up code.
+25 Nov 2014 TKO Updated card list from Wikipedia.
 
 */
 
@@ -100,12 +101,6 @@ var creditCard = (function () {
       // Do not change the order of the first three cards. Since Visa only requires
       // a 4 at the begining, putting it ahead of the other cards would mean that the
       // other cards would never be returned.
-      {
-        name: "Switch",
-        length: [16, 18, 19],
-        prefixes: /^4(903|905|911|936)|^564182|^6(33110|333|759)/, // "4903,4905,4911,4936,564182,633110,6333,6759",
-        checkdigit: true
-      },
       {
         name: "VisaElectron",
         length: 16,
@@ -145,7 +140,19 @@ var creditCard = (function () {
       {
         name: "CarteBlanche",
         length: 14,
-        prefixes: /^30[1-5]/, // "300,301,302,303,304,305",
+        prefixes: /^30[1-5]|^309/, // "300,301,302,303,304,305,309",
+        checkdigit: true
+      },
+      {
+        name: "InterPayment",
+        length: [16, 17, 18, 19],
+        prefixes: /^636/,
+        checkdigit: true
+      },
+      {
+        name: "InstaPayment",
+        lenth: 16,
+        prefixes: /^63[7-9]/, // 637, 638, 639m
         checkdigit: true
       },
       {
@@ -155,27 +162,27 @@ var creditCard = (function () {
         checkdigit: true
       },
       {
-        name: "enRoute",
-        length: 15,
-        prefixes: /^2(014|149)/, // "2014,2149",
-        checkdigit: true
-      },
-      {
-        name: "Solo",
-        length: [16, 18, 19],
-        prefixes: /^6(334|767)/, // "6334,6767",
+        name: "Dankort",
+        length: 16,
+        prefixes: /^5019/,
         checkdigit: true
       },
       {
         name: "Maestro",
-        length: [12, 13, 14, 15, 16, 18, 19],
+        length: [12, 13, 14, 15, 16, 17, 18, 19],
         prefixes: /^5(018|020|038)|^6(304|759|761|762|763)/, // "5018,5020,5038,6304,6759,6761,6762,6763",
         checkdigit: true
       },
       {
-        name: "LaserCard",
+        name: "China UnionPay",
         length: [16, 17, 18, 19],
-        prefixes: /^6(304|706|771|709)/, // "6304,6706,6771,6709",
+        prefixes: /^62/,
+        checkdigit: true
+      },
+      {
+        name: "UATP",
+        length: 15,
+        prefixes: /^1/,
         checkdigit: true
       }
     ];
