@@ -33,10 +33,12 @@ Returns the last error number.
 ### creditCard.set(options)
 Can be a string or an object. If a string it sets an internal list of supported credit cards. If an object, it can optionally set the supported credit cards or error message strings. The object can be in the following format.
 
-    {
-      supportedCards: "visa, mastercard, amex, discover",
-      ccErrors: ["", "language or program specific errors", ...]
-    }
+```javascript
+{
+  supportedCards: "visa, mastercard, amex, discover",
+  ccErrors: ["", "language or program specific errors", ...]
+}
+```
 
 ## Parameters
 ### cardNo
@@ -47,16 +49,21 @@ Credit card number.
 
 Optional list of credit cards to check in a comma delimited string. This is used if you only want to validate certain cards. ie. This string will cause all cards that are not in the list to return an error.
 
-    creditcard.set("visa, mastercard, amex, discover");
+```javascript
+creditcard.set("visa, mastercard, amex, discover");
+```
 
 returns true because the card number is a Discover card.
 
-    creditcard.isValid("6011 0000 0000 0004", "visa, mastercard, amex, discover")
+```javascript
+creditcard.isValid("6011 0000 0000 0004", "visa, mastercard, amex, discover")
+```
 
 returns false because the card number is a Diners Club Carte Blanche card.
 
-    creditcard.isValid("3000 0000 0000 04", "visa, mastercard, amex, discover")
-
+```javascript
+creditcard.isValid("3000 0000 0000 04", "visa, mastercard, amex, discover")
+```
 
 ## Parameters (No longer used, from original program.)
 ### cardnumber
@@ -78,6 +85,31 @@ When you tap Scan Credit Card you get a screen with a rectangle to position your
 ![Scan Credit Card Screen](https://github.com/tannyo/creditcard.js/raw/master/img/IMG_0903.png)
 
 The code in the [demo](https://tannyo.github.io/creditcard.js/) uses the creditcard.getType(partial-or-full-value-of-credit-card-number-field) to change the image of the credit card in the left side of the credit card number input field. The demo currently supports a default card, Visa, MasterCard, AMEX, and Discover card images. While the `creditcard.js` code will validate other cards, the form will display the default card.
+
+```javascript
+$(document).ready(function () {
+  'use strict';
+  var form = $("#cc-form"),
+    cardNumber = form.find("#cardNumber");
+
+  // When the card number changes, set the background card image.
+  cardNumber.on("change blur keyup keypress keydown", function () {
+    // Get the card type based on the card prefix.
+    var ccType = creditCard.getType(cardNumber.val());
+
+    // Remove the last card class.
+    if (cardNumber.data("cc-type")) {
+      cardNumber.removeClass(cardNumber.data("cc-type"));
+    }
+
+    // If there is a valid card type, set the background image class of the input field.
+    if (ccType) {
+      ccType = ccType.toLowerCase();
+      cardNumber.addClass(ccType).data("cc-type", ccType);
+    }
+  });
+});
+```
 
 You may have noticed on a mobile device that the keyboard changes to big blocky number keys. I found out how to do this from Luke Wroblewski from the [Video: Mobile Navigation, Conversion, Input, & More](http://www.lukew.com/ff/entry.asp?1936) presentation he gave at Google in Ireland. It consists of 2 videos with the second video getting into the nuts and bolts of mobile form design. Both videos are very good and I highly recommend taking the 2 hours to view the videos.
 
