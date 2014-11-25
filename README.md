@@ -8,6 +8,10 @@ I needed a way to validate a credit card number and updated the code to an objec
 * Added method to determine the credit card type by credit card prefix.
 * Removed the requirement to supply the card type when validating a credit card number.
 
+> The structure of credit card formats was gleaned from a variety of sources on the web, although the best is probably on [Wikepedia ("Credit card number")](http://en.wikipedia.org/wiki/Credit_card_number).
+>
+> John Gardner
+
 ## Usage
 
     <script src="path/to/creditcard.js"></script>
