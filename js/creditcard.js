@@ -75,6 +75,7 @@ Modified:   Tanny O'Haley
                 Updated MasterCard and DinersClub prefixes from Wikipedia. Updated documentation.
                 Cleaned up code.
 25 Nov 2014 TKO Updated card list from Wikipedia.
+03 Dec 2014 TKO Changed method to remove spaces from includeCards list.
 
 */
 
@@ -196,7 +197,7 @@ var creditCard = (function () {
     includeCards = includeCards || supportedCards;
 
     if (includeCards) {
-      includeCards = includeCards.replace(" ", "").toLowerCase();
+      includeCards = includeCards.replace(/\s*,\s*/g, "").toLowerCase();
       if (!/,$/.test(includeCards)) {
         includeCards += ",";
       }
