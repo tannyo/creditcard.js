@@ -151,7 +151,7 @@ Want to contribute? Great! Just fork the project, make your changes and open a [
 
 The MIT License (MIT)
 
-Copyright (c) 2014 [John Gardner](http://www.braemoor.co.uk/) and [Tanny O'Haley](http://tanny.ica.com)
+Copyright (c) 2015 [John Gardner](http://www.braemoor.co.uk/) and [Tanny O'Haley](http://tanny.ica.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
