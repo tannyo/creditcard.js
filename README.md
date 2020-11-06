@@ -72,7 +72,7 @@ number on the card
 ### cardName
 name of card
 
-# Demo
+## Demo
 
 [Credit Card Information](https://tannyo.github.io/creditcard.js/)
 
